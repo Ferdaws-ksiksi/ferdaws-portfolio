@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="#home" class="brand-link">
+          <span class="brand-text">FK</span>
+        </a>
+      </div>
+      
+      <div class="nav-menu" [class.active]="isMenuOpen">
+        <a href="#home" class="nav-link" (click)="closeMenu()">Home</a>
+        <a href="#about" class="nav-link" (click)="closeMenu()">About</a>
+        <a href="#experience" class="nav-link" (click)="closeMenu()">Experience</a>
+        <a href="#projects" class="nav-link" (click)="closeMenu()">Projects</a>
+        <a href="#skills" class="nav-link" (click)="closeMenu()">Skills</a>
+        <a href="#contact" class="nav-link" (click)="closeMenu()">Contact</a>
+      </div>
+      
+      <div class="nav-toggle" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </div>
+</header>

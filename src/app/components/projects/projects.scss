@@ -1,0 +1,125 @@
+.projects {
+  .section-header {
+    margin-bottom: var(--spacing-xxl);
+
+    .section-title {
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.project-card {
+  background: var(--background-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  transition: all var(--transition-medium);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+  }
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-secondary);
+
+  img {
+    width: 65%;
+    height: 80%;
+    object-fit: fill;
+    transition: transform var(--transition-medium);
+
+    .project-card:hover & {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.project-content {
+  padding: var(--spacing-lg);
+
+  h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .project-description {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+
+    .tech-tag {
+      background: var(--background-secondary);
+      color: var(--text-primary);
+      padding: var(--spacing-xs) var(--spacing-sm);
+      border-radius: var(--radius-md);
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid var(--border-color);
+    }
+  }
+
+  .project-links {
+    display: flex;
+    gap: var(--spacing-md);
+
+    .btn {
+      padding: var(--spacing-sm) var(--spacing-lg);
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content {
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    .project-description {
+      font-size: 0.9rem;
+    }
+
+    .tech-tag {
+      font-size: 0.75rem;
+    }
+
+    .btn {
+      font-size: 0.8rem;
+      padding: var(--spacing-xs) var(--spacing-md);
+    }
+  }
+}
+
