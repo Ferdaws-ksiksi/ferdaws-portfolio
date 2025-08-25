@@ -13,7 +13,8 @@ $transition-medium: 0.3s ease-in-out;
 
 /* Animations */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -107,6 +108,9 @@ $transition-medium: 0.3s ease-in-out;
       line-height: 1.7;
       color: $text-secondary;
       margin-bottom: $spacing-xl;
+      text-align: justify;
+      text-justify: inter-word; 
+      line-height: 1.6; 
     }
   }
 
@@ -149,8 +153,8 @@ $transition-medium: 0.3s ease-in-out;
     .image-with-shapes {
       position: relative;
       width: 100%;
-      max-width: 300px;   /* responsive size */
-      aspect-ratio: 1/1;  /* keeps it square */
+      max-width: 300px; /* responsive size */
+      aspect-ratio: 1/1; /* keeps it square */
 
       &::before {
         content: '';
@@ -213,12 +217,12 @@ $transition-medium: 0.3s ease-in-out;
 /* 📱 Responsive adjustments */
 @media (max-width: 768px) {
   .hero-content {
-    grid-template-columns: 1fr;  /* stack text & image */
+    grid-template-columns: 1fr; /* stack text & image */
     text-align: center;
   }
 
   .hero-text {
-    order: 2;  /* text after image */
+    order: 2; /* text after image */
   }
 
   .hero-image {

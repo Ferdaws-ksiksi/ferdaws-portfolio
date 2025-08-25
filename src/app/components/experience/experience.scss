@@ -158,9 +158,9 @@
 }
 
 .experience-description {
-  color: var(--text-secondary);
+  text-align: left; 
   line-height: 1.6;
-  margin-bottom: var(--spacing-lg);
+  color: var(--text-secondary);
 }
 
 .tech-stack {
