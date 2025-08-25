@@ -10,7 +10,7 @@
           "style": "scss"
         }
       },
-      
+
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -81,13 +81,11 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss",
-            "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-
-          ]
-            
+            "styles": [
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/styles.scss"
+            ]
           }
-          
         }
       }
     }

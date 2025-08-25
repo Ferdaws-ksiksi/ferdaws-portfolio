@@ -148,8 +148,9 @@ $transition-medium: 0.3s ease-in-out;
 
     .image-with-shapes {
       position: relative;
-      width: 300px;
-      height: 300px;
+      width: 100%;
+      max-width: 300px;   /* responsive size */
+      aspect-ratio: 1/1;  /* keeps it square */
 
       &::before {
         content: '';
@@ -206,5 +207,22 @@ $transition-medium: 0.3s ease-in-out;
         right: -50px;
       }
     }
+  }
+}
+
+/* 📱 Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;  /* stack text & image */
+    text-align: center;
+  }
+
+  .hero-text {
+    order: 2;  /* text after image */
+  }
+
+  .hero-image {
+    order: 1;
+    margin-bottom: 2rem;
   }
 }
